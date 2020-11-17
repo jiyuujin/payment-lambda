@@ -1,0 +1,15 @@
+# Environment/secret variables
+secrets.dev.json
+secrets.prod.json
+
+# Dependency directories
+node_modules
+package-lock.json
+yarn.lock
+
+# Serverless build
+.serverless
+
+.idea
+
+.env
