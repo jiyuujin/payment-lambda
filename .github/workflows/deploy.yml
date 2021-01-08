@@ -29,7 +29,6 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm install serverless -g
           npm install
 
       - name: Deploy to Lambda
