@@ -1,8 +1,6 @@
 require('dotenv').config()
 
-const stripe = process.env.AWS_STAGE === 'test'
-    ? require('stripe')(process.env.TEST_STRIPE_SECRET_KEY)
-    : require('stripe')(process.env.LIVE_STRIPE_SECRET_KEY)
+const stripe = require('stripe')(process.env.LIVE_STRIPE_SECRET_KEY)
 
 exports.handler = (event, context, callback) => {
 
