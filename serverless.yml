@@ -3,7 +3,7 @@ service: payment-lambda
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: live
+  stage: ${env:AWS_STAGE}
   region: ap-northeast-1
   environment:
     LIVE_STRIPE_SECRET_KEY: ${env:LIVE_STRIPE_SECRET_KEY}

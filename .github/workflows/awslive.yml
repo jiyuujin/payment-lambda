@@ -35,7 +35,7 @@ jobs:
       - name: Deploy to Lambda
         run: sls deploy
         env:
+          AWS_STAGE: live
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           LIVE_STRIPE_SECRET_KEY: ${{ secrets.LIVE_STRIPE_SECRET_KEY }}
-          TEST_STRIPE_SECRET_KEY: ${{ secrets.TEST_STRIPE_SECRET_KEY }}
