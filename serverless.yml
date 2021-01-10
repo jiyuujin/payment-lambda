@@ -3,14 +3,21 @@ service: payment-lambda
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: live
+  stage: ${opt:stage, self:custom.defaultStage}
   region: ap-northeast-1
+
+custom:
+  defaultStage: test
   environment:
-    LIVE_STRIPE_SECRET_KEY: ${env:LIVE_STRIPE_SECRET_KEY}
+    test:
+      TEST_STRIPE_SECRET_KEY: ${env:TEST_STRIPE_SECRET_KEY}
+    live:
+      LIVE_STRIPE_SECRET_KEY: ${env:LIVE_STRIPE_SECRET_KEY}
 
 functions:
   checkout:
     handler: checkout.handler
+    environment: ${self:custom.environment.${self:provider.stage}}
     events:
       - http:
           path: checkout

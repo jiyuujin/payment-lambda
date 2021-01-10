@@ -5,6 +5,8 @@
   "scripts": {
     "create": "sls create --template aws-nodejs",
     "deploy": "sls deploy",
+    "deploy --test": "sls deploy --test",
+    "deploy --live": "sls deploy --live",
     "lint": "eslint ./ --ext js",
     "lint:fix": "eslint ./ --ext js --fix"
   },
