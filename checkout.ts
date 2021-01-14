@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const stripe = require('stripe')(process.env.LIVE_STRIPE_SECRET_KEY)
 
-exports.handler = (event, context, callback) => {
+exports.handler = (event: unknown, context: unknown, callback: any) => {
 
     const headers = {
         'Content-Type': 'application/json',
@@ -14,7 +14,7 @@ exports.handler = (event, context, callback) => {
     stripe.paymentIntents.create({
         amount: 500,
         currency: 'jpy',
-    }, function(err, charge) {
+    }, function(err: any, charge: unknown) {
         if (err) {
             callback(null, {
                 headers,
