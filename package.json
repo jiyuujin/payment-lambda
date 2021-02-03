@@ -5,8 +5,8 @@
   "scripts": {
     "create": "sls create --template aws-nodejs",
     "deploy": "sls deploy",
-    "deploy --test": "sls deploy --test",
-    "deploy --live": "sls deploy --live",
+    "deploy --test": "NODE_ENV=test sls deploy --stage test",
+    "deploy --live": "NODE_ENV=live sls deploy --stage live",
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
