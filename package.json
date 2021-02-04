@@ -10,7 +10,7 @@
     "tsc": "tsc --noEmit"
   },
   "dependencies": {
-    "dotenv": "^7.0.0",
+    "dotenv": "^8.2.0",
     "stripe": "^6.36.0"
   },
   "devDependencies": {
