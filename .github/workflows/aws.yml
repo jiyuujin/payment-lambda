@@ -6,6 +6,7 @@ on:
       - master
       - feature/github-actions
       - feature/stages
+      - feature/nodejs14
 
 jobs:
   deploy:
