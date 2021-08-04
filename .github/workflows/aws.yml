@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - master
-      - feature/github-actions
-      - feature/stages
-      - feature/nodejs14
+  pull_request:
+    branches:
+      - master
 
 jobs:
   deploy:
