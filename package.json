@@ -7,7 +7,8 @@
     "deploy": "sls deploy",
     "deploy --test": "NODE_ENV=test sls deploy --stage test",
     "deploy --live": "NODE_ENV=live sls deploy --stage live",
-    "tsc": "tsc --noEmit"
+    "tsc": "tsc --noEmit",
+    "build:w": "webpack --config scripts/webpack.config.js --mode production"
   },
   "dependencies": {
     "dotenv": "^7.0.0",
@@ -15,6 +16,12 @@
   },
   "devDependencies": {
     "@types/node": "^14.14.25",
-    "typescript": "^4.1.3"
+    "@types/stripe-checkout": "^1.0.4",
+    "@types/uuid": "^8.3.1",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.1.3",
+    "uuid": "^8.3.2",
+    "webpack": "^5.48.0",
+    "webpack-cli": "^4.7.2"
   }
 }
