@@ -15,7 +15,7 @@
     "stripe": "^8.167.0"
   },
   "devDependencies": {
-    "@types/node": "^14.14.25",
+    "@types/node": "^16.7.10",
     "@types/stripe-checkout": "^1.0.4",
     "@types/uuid": "^8.3.1",
     "ts-loader": "^9.2.5",
