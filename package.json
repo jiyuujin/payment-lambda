@@ -11,7 +11,7 @@
     "build:w": "webpack --config scripts/webpack.config.js --mode production"
   },
   "dependencies": {
-    "dotenv": "^7.0.0",
+    "dotenv": "^10.0.0",
     "stripe": "^8.191.0"
   },
   "devDependencies": {
